@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0a0a0a;
+  --color-charcoal: #141414;
+  --color-violet-accent: #8b5cf6;
+  --color-cyan-accent: #06b6d4;
+  --color-emerald-accent: #10b981;
+  --color-amber-accent: #f59e0b;
+  --color-red-accent: #ef4444;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-slate-200 font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-charcoal/60 backdrop-blur-md border border-white/10 rounded-xl shadow-xl;
+  }
+  .glow-violet {
+    @apply shadow-[0_0_20px_rgba(139,92,246,0.3)];
+  }
+}
